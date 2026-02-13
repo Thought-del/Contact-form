@@ -1,0 +1,78 @@
+:root {
+    /* === 1. COLORS === */
+    --color-primary: hsl(169, 82%, 27%);
+    --color-therity: hsl(148, 38%, 91%);
+    --color-white: hsl(0, 100%, 100%);
+
+    --color-text-medium: hsl(186, 15%, 59%);
+    --color-text-darker: hsl(187, 24%, 22%);
+    --color-error: hsl(0, 66%, 54%);
+
+    /* === 2. TYPOGRAPHY === */
+    --font-family: 'Karla', system-ui, -apple-system, sans-serif;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-md: 1.125rem;   /* 18px */
+    --font-size-lg: 1.25rem;    /* 20px */
+    --font-size-xl: 1.5rem;     /* 24px */
+    --font-size-xxl: 2rem;      /* 32px */
+    
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.8;
+
+    /* === 3. INDENTS AND DIMENSIONS === */
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.5rem;    /* 24px */
+    --space-6: 2rem;      /* 32px */
+    --space-7: 3rem;      /* 48px */
+    --space-8: 4rem;      /* 64px */
+    
+    --border-radius-sm: 0.375rem;  /* 6px */
+    --border-radius-md: 0.5rem;   /* 8px */
+    --border-radius-lg: 1rem;     /* 16px */
+    --border-radius-xl: 1.5rem;   /* 24px */
+    --border-radius-full: 50%; /* для кругов */
+    
+    /* === 4. SHADOWS === */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+}  /* Font size (labels): 16px */
+
+
+/* === Main === */
+*, *::before, *::after {
+    padding: var(--space-0);
+    margin: var(--space-0);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-therity);
+    min-height: 100vh;
+    padding: var(--space-4);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    width: min(100%, 1200px);
+    padding: var(--space-5);
+}
+
+
+/* === === */
