@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- meta tags for SEO -->
-  <title>Faq-accordion | Frontend Mentor</title>
+  <title>Contact Us Form | Frontend Mentor</title>
   <meta name="description" content="Contact Us form template with validation - clean, accessible contact page featuring name fields, email input, query type radio buttons, message box, and consent checkbox. Perfect for learning form validation and responsive design.">
   <meta name="keywords" content="contact form, HTML form, form validation, responsive form, accessible form, CSS form styling, frontend practice, web development, Karla font, user interface, UI components, form design, contact page, radio buttons, checkbox design">
 
@@ -13,95 +13,130 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" as="style">
 
   <!-- add CSS and JS files -->
-   <link rel="stylesheet" href="style.css">
-   <script defer src="main.js"></script>
+   <link rel="stylesheet" href="css/main.css">
+   <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
-    <main class="container">
-      <h1>Contact Us</h1>
+  <div class="success-message" hidden>
+    <h2>
+      <img src="assets/images/icon-success-check.svg" alt="" loading="lazy" aria-hidden="true">
+      Message Sent!
+    </h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
 
-      <form novalidate>
-        <label for="first-name">First Name *</label>
-        <input
-          type="text"
-          name="first-name"
-          id="first-name"
-          required
-          autocomplete="given-name"
-          aria-required="true"
-          aria-invalid="false"
-          aria-describedby="first-name-error" >
-        <span aria-live="polite" class="error-message" id="first-name-error" hidden>This field is required</span>
+  <main class="container">
+    <h1 id="form-title">Contact Us</h1>
 
-        <label for="last-name">Last Name *</label>
-        <input
-          type="text"
-          name="last-name"
-          id="last-name"
-          required
-          autocomplete="family-name"
-          aria-required="true"
-          aria-invalid="false"
-          aria-describedby="last-name-error" >
-        <span aria-live="polite" class="error-message" id="last-name-error" hidden>This field is required</span>
+    <form novalidate aria-labelledby="form-title">
 
-        <label for="email">Email Address *</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          autocomplete="email"
-          aria-required="true"
-          aria-invalid="false"
-          aria-describedby="email-error" >
-        <span aria-live="polite" class="error-message" id="email-error" hidden>This field is required</span>
+      <div class="input-group">
+        <div class="first-name-block">
+          <label for="first-name">First Name <span class="req-symbol">*</span></label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            required
+            autocomplete="given-name"
+            aria-required="true"
+            aria-invalid="false"
+            aria-describedby="first-name-error" >
+          <span aria-live="polite" class="error-message" id="first-name-error" hidden>This field is required</span>
+        </div>
 
-        <fieldset aria-required="true" aria-invalid="false" aria-describedby="query-type-error">
-          <legend>Query Type *</legend>
-          <div>
-            <input
-              type="radio"
-              name="query-type"
-              id="general-enquiry" >
-              <label for="general-enquiry">General Enquiry</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="query-type"
-              id="support-request" >
-              <label for="support-request">Support Request</label>
-          </div>
-        </fieldset>
-        <span aria-live="polite" class="error-message" id="query-type-error" hidden>Please select a query type</span>
+        <div class="last-name-block">
+          <label for="last-name">Last Name <span class="req-symbol">*</span></label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            required
+            autocomplete="family-name"
+            aria-required="true"
+            aria-invalid="false"
+            aria-describedby="last-name-error" >
+          <span aria-live="polite" class="error-message" id="last-name-error" hidden>This field is required</span>
+        </div>
 
-        <label for="text-message">Message *</label>
+        <div class="email-block">
+          <label for="email">Email Address <span class="req-symbol">*</span></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            autocomplete="email"
+            aria-required="true"
+            aria-invalid="false"
+            aria-describedby="email-error" >
+          <span aria-live="polite" class="error-message" id="email-error" hidden>This field is required</span>
+        </div>
+      </div>
+
+      <fieldset class="radiogroup" aria-required="true" aria-invalid="false" aria-describedby="query-type-error">
+        <legend>Query Type <span class="req-symbol">*</span></legend>
+        <div class="radio-input">
+            <label class="custom-radio">
+              <input
+                type="radio"
+                name="query-type"
+                id="general-enquiry"
+                value="general" >
+              <span class="radio-custom"></span>
+              General Enquiry
+            </label>
+        </div>
+        <div class="radio-input">
+            <label class="custom-radio">
+              <input
+                type="radio"
+                name="query-type"
+                id="support-request"
+                value="support" >
+              <span class="radio-custom"></span>
+              Support Request
+            </label>
+        </div>
+      </fieldset>
+      <span aria-live="polite" class="error-message" id="query-type-error" hidden>Please select a query type</span>
+
+      <div class="text-group">
+        <label for="text-message">Message <span class="req-symbol">*</span></label>
         <textarea
           name="text-message"
           id="text-message"
           required
           aria-required="true"
           aria-invalid="false"
-          aria-describedby="text-error" >
-        </textarea>
+          aria-describedby="text-error" ></textarea>
         <span aria-live="polite" class="error-message" id="text-error" hidden>This field is required</span>
+      </div>
 
-        <label for="consent">I consent to being contacted by the team *</label>
-        <input
-          type="checkbox"
-          name="consent"
-          id="consent"
-          required
-          aria-required="true"
-          aria-invalid="false"
-          aria-describedby="consent-error" >
-        <span aria-live="polite" class="error-message" id="consent-error" hidden>To submit this form, please consent to being contacted</span>
+      <div class="button-group" role="group">
+        <div class="checkbox-input">
+          <label class="custom-checkbox">
+            <input
+              type="checkbox"
+              name="consent"
+              id="consent"
+              required
+              aria-required="true"
+              aria-invalid="false"
+              aria-describedby="consent-error" >
+            <span class="checkbox-custom"></span>
+            I consent to being contacted by the team <span class="req-symbol">*</span>
+          </label>
+          <span aria-live="polite" class="error-message" id="consent-error" hidden>To submit this form, please consent to being contacted</span>
+        </div>
 
         <button type="submit" class="submit-btn">Submit</button>
-      </form>
-    </main>
+      </div>
+
+    </form>
+  </main>
 </body>
 </html>

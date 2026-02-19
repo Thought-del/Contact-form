@@ -1,0 +1,47 @@
+:root {
+    --bg-body: hsl(187, 30%, 8%);
+    --bg-container: hsl(187, 25%, 12%);
+    --text-main: hsl(0, 0%, 95%);
+    --text-secondary: hsl(186, 10%, 70%);
+    --accent: hsl(169, 70%, 45%);
+    --error: hsl(0, 70%, 60%);
+    --input-bg: hsl(187, 25%, 20%);
+    --border-light: hsl(186, 10%, 30%);
+    --border-focus: hsl(169, 70%, 45%);
+}
+
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+.container {
+    background-color: var(--bg-container);
+}
+
+h1, label, legend, p {
+    color: var(--text-main);
+}
+
+.input-group input,
+.radio-input,
+#text-message {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border-color: var(--border-light);
+}
+
+.req-symbol {
+    color: var(--accent);
+}
+
+.error-message {
+    color: var(--error);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--border-focus);
+    border-color: var(--border-focus);
+}

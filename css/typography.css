@@ -1,0 +1,10 @@
+h1 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-darker);
+    margin-block-end: var(--space-5);
+}
+
+label, .input-group input, legend, .submit-btn, #text-message {
+    font-family: var(--font-family);
+}

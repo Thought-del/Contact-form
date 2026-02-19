@@ -1,0 +1,22 @@
+.success-message {
+    position: absolute;
+    top: 7px;
+    opacity: 0.85;
+    background-color: var(--color-text-darker);
+    font-family: var(--font-family);
+    line-height: var(--line-height-normal);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-5);
+}
+
+h2 {
+    color: var(--color-white);
+    display: flex;
+    gap: 0.75rem;
+    margin-block-end: var(--space-1);
+}
+
+p {
+    color: var(--color-text-medium);
+}

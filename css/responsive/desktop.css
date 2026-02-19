@@ -1,0 +1,12 @@
+.input-group { flex-flow: row wrap; }
+.first-name-block, .last-name-block { flex: 1; }
+.email-block { width: 100%; }
+
+.radiogroup { flex-direction: row; }
+.radio-input { flex: 1; }
+
+#text-message { height: 7.5rem; }
+
+.input-group input:hover, .input-group input:focus {
+    transform: scale(1.03, 1.03);
+}

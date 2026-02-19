@@ -1,0 +1,28 @@
+body {
+    background-color: var(--color-therity);
+    min-height: 100vh;
+    padding: var(--space-6) var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    width: min(100%, 800px);
+    padding: var(--space-5);
+}
+
+.input-group, .text-group, .radiogroup, .button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

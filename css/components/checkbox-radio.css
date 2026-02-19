@@ -1,0 +1,82 @@
+.custom-checkbox, .custom-radio {
+    display: flex;
+    align-items: center;
+    margin-block-end: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    line-height: var(--line-height-loose);
+}
+
+.custom-checkbox input[type="checkbox"], .custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.checkbox-custom, .radio-custom {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--color-text-medium);
+    background: inherit;
+    border-radius: 2px;
+    margin-inline-end: var(--space-3);
+}
+
+.radio-custom {
+    border-radius: var(--border-radius-full);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+    background-image: url('/assets/images/icon-checkbox-check.svg');
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-custom {
+    border: none;
+    background-image: url('/assets/images/icon-radio-selected.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Hover, focus, active, animation*/
+
+.radio-input.active {
+    border-color: var(--color-primary);
+    background-color: hsl(170, 30%, 85%);
+}
+
+.custom-checkbox input[type="checkbox"]:focus:not(:focus-visible) + .checkbox-custom,
+.custom-radio input[type="radio"]:focus:not(:focus-visible) + .radio-custom {
+  outline: none;
+}
+
+.custom-checkbox input[type="checkbox"]:focus + .checkbox-custom,
+.custom-radio input[type="radio"]:focus + .radio-custom,
+.submit-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.custom-checkbox:hover .checkbox-custom {
+    will-change: transform;
+    animation: checkbox 2s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-custom,
+.custom-radio input[type="radio"]:checked + .radio-custom {
+    animation: none;
+}
+
+@keyframes checkbox {
+    0%, 100% { transform: scale(1) rotate(0); }
+    25% { transform: scale(1.1) rotate(90deg) }
+    50% { transform: scale(1.2) rotate(180deg) }
+    75% { transform: scale(1.1) rotate(360deg) }
+}

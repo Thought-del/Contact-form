@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    padding: var(--space-0);
+    margin: var(--space-0);
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+}

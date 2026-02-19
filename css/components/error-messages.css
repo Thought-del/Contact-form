@@ -1,0 +1,9 @@
+.input-group input.active, #text-message.active {
+    border-color: var(--color-error);
+}
+
+.error-message[hidden] { display: none; }
+
+.error-message {
+    color: var(--color-error);
+}
