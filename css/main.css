@@ -11,4 +11,4 @@
 
 @import url('themes/dark.css') (prefers-color-scheme: dark);
 @import url('responsive/desktop.css') (min-width: 64em);
-/* @import url('responsive/reduced.css') (prefers-reduced-motion: reduce); */
+@import url('responsive/reduced.css') (prefers-reduced-motion: reduce);

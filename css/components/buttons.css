@@ -14,3 +14,7 @@
 .submit-btn:hover {
     background: hsl(169, 85%, 13%);
 }
+
+.submit-btn:focus:not(:focus-visible) {
+    outline: none;
+}

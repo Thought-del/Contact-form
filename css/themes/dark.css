@@ -45,3 +45,31 @@ textarea:focus {
     outline: 2px solid var(--border-focus);
     border-color: var(--border-focus);
 }
+
+.success-message {
+    background-color: hsl(169, 50%, 15%);
+    border: 1px solid hsl(169, 70%, 45%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.success-message h2 {
+    color: hsl(169, 70%, 75%);
+}
+
+.success-message p {
+    color: hsl(0, 0%, 80%);
+}
+
+/* Active radio */
+.radio-input.active {
+    background-color: hsl(169, 30%, 20%);
+    border-color: hsl(169, 70%, 45%);
+}
+
+.radio-input.active .custom-radio {
+    color: white;
+}
+
+.radio-input.active .radio-custom {
+    border-color: hsl(169, 70%, 45%);
+}
